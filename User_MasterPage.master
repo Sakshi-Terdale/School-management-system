@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="User_MasterPage.master.cs"
+    Inherits="Admin_MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>School Management System</title>
+   
+    
+   
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+
+    <style>
+      h1 {
+  text-shadow: 2px 2px 5px blue;
+  text-align:center;
+  margin-left:420px;
+}
+        </style>
+   
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <form id="form1" runat="server">
+    
+    
+    <div class="dashboard-main-wrapper">
+    
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a class="navbar-brand" href="#">Admin</a>
+                <img src="../stduents.jpg"  width="100"/>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <h1>School Management System</h1>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item dropdown nav-user">
+                            <a class="nav-link nav-user-img" href="#"><asp:Label ID="lblTopBarUserName" runat="server" ></asp:Label>
+                                </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div><br /><br />
+                     <marquee> <p style="font-size:medium"> <b>A School management System centralized in digital Solution</b></p></marquee> 
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="Dashborad.aspx">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Menu
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="Dashborad.aspx" ><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+                            </li>
+                           
+                            <li class="nav-item">
+                               <a class="nav-link" href="TeacherInformation.aspx" ><i class="fa fa-fw fa-user-circle"></i>Add Teacher </a>
+                            </li>
+                                                         <li class="nav-item ">
+                                <a class="nav-link" href="AddStudent.aspx" target="_blank" ><i class="fa fa-fw fa-user-circle"></i>Add Student</a></li>
+                           <li class="nav-item ">
+                                <a class="nav-link" href="ShowteacherInfo.aspx" ><i class="fa fa-fw fa-user-circle"></i>Show Teacher Information</a>
+                            </li>
+                                                                                         <li class="nav-item ">
+                               <a class="nav-link" href="Showstudentinfo.aspx" target="_blank" ><i class="fa fa-fw fa-user-circle"></i>Show Student Information</a></li>
+                             <li class="nav-item ">
+                                <a class="nav-link " href="StudentApplication.aspx" ><i class="fa fa-fw fa-user-circle"></i>Addmission Student</a>
+                            </li>
+
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="FeeCollection.aspx" target="_blank" ><i class="fa fa-fw fa-user-circle"></i>Fees Collection</a>
+                            </li>
+                             <li class="nav-item ">
+                          <a class="nav-link" href="Upgradeclass.aspx" target="_blank" ><i class="fa fa-fw fa-user-circle"></i>Upgrade Class</a>
+                             </li>
+                            
+                     </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+      
+        <div class="dashboard-wrapper">
+            <div class="container-fluid dashboard-content">
+            
+                
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+      
+            </div>
+           
+            <div class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <a href="#">School Management system</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+      
+    </div>
+
+    </form>
+   
+    <script src="assets/libs/js/dashboard-ecommerce.js"></script>
+
+      <!--    Data Table       --->
+  
+    <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
+    </body>
+</html>
